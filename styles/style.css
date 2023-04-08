@@ -11,15 +11,15 @@ html {
 }
 
 :root {
-    --card-radius: 0.8rem;
+    --primary-radius: 0.4rem;
 
     /* Primary */
     --cyan: hsl(179, 62%, 43%);
     --bright-yellow: hsl(71, 73%, 54%);
 
     /* Neutral */
-    --light-gray: hsl(204, 43%, 93%);
-    --grayish-blue: hsl(218, 22%, 67%);
+    --light-gray: hsl(203, 44%, 93%);
+    --grayish-blue: hsl(217, 22%, 67%);
 }
 
 img {
@@ -34,4 +34,166 @@ body {
     max-width: 100vw;
     height: 100vh;
     background-color: var(--light-gray);
+
+    display: grid;
+    place-items: center;
+}
+
+main {
+    width: 19.5rem;
+    border-radius: var(--primary-radius);
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.intro-box {
+    background-color: white;
+    padding: 1.7rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.title {
+    color: var(--cyan);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.sub-title {
+    color: var(--bright-yellow);
+    font-size: 0.925rem;
+    font-weight: 700;
+}
+
+.description {
+    color: var(--grayish-blue);
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+}
+
+.plan-box {
+    background-color: var(--cyan);
+    color: var(--light-gray);
+    padding: 1.7rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.plan-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.plan-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.plan-amount {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.price {
+    margin: 0;
+}
+
+.term {
+    opacity: 0.6;
+}
+
+.plan-case {
+    font-size: 0.95rem;
+}
+
+.sign-up-button {
+    padding: 0.9rem;
+    margin-top: 0.75rem;
+    background-color: var(--bright-yellow);
+    color: white;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    border-radius: var(--primary-radius);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 20%);
+}
+
+.info-box {
+    background-color: hsl(179, 47%, 52%);
+    padding: 1.7rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.info-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: white;
+}
+
+.list {
+    color: var(--light-gray);
+    font-weight: 400;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    row-gap: 0.35rem;
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        width: 45%;
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        
+        box-shadow: 0 12px 18px rgba(152, 156, 189, 25%);
+    }
+
+    .intro-box {
+        grid-column: 1/3;
+        grid-row: 1/5;
+
+        padding: 2.5rem 2.5rem;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .sub-title {
+        font-size: 1.05rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .plan-box {
+        grid-column: 1/2;
+        grid-row: 5/10;
+
+        padding: 2.5rem 2.5rem;
+    }
+
+    .info-box {
+        grid-column: 2/3;
+        grid-row: 5/10;
+
+        padding: 2.5rem 2.5rem;
+    }
 }
