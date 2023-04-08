@@ -14,4 +14,4 @@ Thanks for checking out this front-end coding challenge picked up from Frontend 
 
 Deploy this project on Github Pages / Vercel / Netlify.
 
-**Live URL:** https://priyanshusharma0326.github.io/single-price-grid-component-master/
+**Live URL:** https://coruscating-kataifi-5fca46.netlify.app/
